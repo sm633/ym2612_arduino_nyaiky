@@ -12,7 +12,7 @@
 #define YM_DATA_PORT PORTD
 #define YM_MCLOCK (1)
 #define YM_MCLOCK_DDR DDRB
-
+/* 1cycle = 0.25usec */
 static void write_ym(unsigned char data){
     YM_CTRL_PORT &= ~_BV(YM_CS);
     YM_DATA_PORT = data;
